@@ -34,3 +34,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Supabase setup
+
+1. Create a Supabase project and copy `.env.example` to `.env.local`.
+2. Set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` to the project values.
+3. Open `supabase/setup.sql`, copy its contents, paste the SQL contents into the Supabase SQL Editor, and click **Run**. Do not paste the filename itself; `supabase/migrations/...sql` is a local project path, not SQL.
+4. Configure Authentication > Providers > Email if you want to add accounts later.
+
+The wall opens directly without requiring an account. Posts, profile edits, profile pictures, and wall pictures are stored in Supabase. Realtime inserts are shown automatically. The app does not use browser storage as the source of truth.
